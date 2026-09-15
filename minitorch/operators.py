@@ -13,7 +13,7 @@ from typing import Callable, Iterable
 def mul(x: float, y: float) -> float:
     "$f(x, y) = x * y$"
     return x * y
-    # Implement for Task 0.1. 
+    # Implement for Task 0.1.
     # raise NotImplementedError('Need to implement for Task 0.1')
 
 
@@ -218,12 +218,12 @@ def reduce(
         for x in ls:
             res = fn(x, res)
         return res
-    
+
     return reduce_fn
     # Implement for Task 0.3.
     # raise NotImplementedError('Need to implement for Task 0.3')
 
- 
+
 def sum(ls: Iterable[float]) -> float:
     "Sum up a list using `reduce` and `add`."
     return reduce(add, 0)(ls)

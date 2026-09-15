@@ -120,7 +120,7 @@ def test_sigmoid(a: float) -> None:
 @given(small_floats, small_floats, small_floats)
 def test_transitive(a: float, b: float, c: float) -> None:
     "Test the transitive property of less-than (a < b and b < c implies a < c)"
-    if lt(a, b) and lt(b, c): 
+    if lt(a, b) and lt(b, c):
         assert lt(a, c)
     # Implement for Task 0.2.
     # raise NotImplementedError('Need to implement for Task 0.2')
