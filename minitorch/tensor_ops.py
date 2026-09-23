@@ -268,7 +268,6 @@ def tensor_map(
         for ordinal in range(int(operators.prod(out_shape))):
             to_index(ordinal, out_shape, out_index)
             broadcast_index(out_index, out_shape, in_shape, in_index)
-            to_index(ordinal, in_shape, in_index)
             out_pos = index_to_position(out_index, out_strides)
             in_pos = index_to_position(in_index, in_strides)
 
@@ -327,8 +326,6 @@ def tensor_zip(
             broadcast_index(out_index, out_shape, a_shape, a_index)
             broadcast_index(out_index, out_shape, b_shape, b_index)
 
-            to_index(ordinal, a_shape, a_index)
-            to_index(ordinal, b_shape, b_index)
             out_pos = index_to_position(out_index, out_strides)
             a_pos = index_to_position(a_index, a_strides)
             b_pos = index_to_position(b_index, b_strides)
