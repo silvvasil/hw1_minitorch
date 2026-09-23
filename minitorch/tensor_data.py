@@ -86,7 +86,7 @@ def broadcast_index(
     Returns:
         None
     """
-    
+
     # Implement for Task 2.2.
     # raise NotImplementedError('Need to implement for Task 2.2')
 
