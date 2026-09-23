@@ -34,7 +34,11 @@ def render_train_interface(
     st.markdown("### Model")
     if hidden_layer:
         hidden_layers = st.number_input(
-            "Size of hidden layer", min_value=1, max_value=200, step=1, value=2
+            "Size of hidden layer",
+            min_value=1,
+            max_value=200,
+            step=1,
+            value=10 if TrainCls.__name__ == "TensorTrain" else 2,
         )
     else:
         hidden_layers = 0
